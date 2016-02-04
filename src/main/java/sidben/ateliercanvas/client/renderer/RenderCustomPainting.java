@@ -1,7 +1,5 @@
 package sidben.ateliercanvas.client.renderer;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
@@ -9,14 +7,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.StringUtils;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+import org.lwjgl.opengl.GL14;
+
 import sidben.ateliercanvas.ModAtelierCanvas;
 import sidben.ateliercanvas.entity.item.EntityCustomPainting;
-import sidben.ateliercanvas.helper.LocalizationHelper;
-import sidben.ateliercanvas.helper.LocalizationHelper.Category;
-import sidben.ateliercanvas.reference.TextFormatTable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -107,7 +104,6 @@ public class RenderCustomPainting extends Render
         final Tessellator tessellator = Tessellator.instance;
 
 
-
         bindTexture(vanillaPainting);
 
         final int iMax = width / 16;
@@ -191,6 +187,7 @@ public class RenderCustomPainting extends Render
 
 
                 tessellator.draw();
+                
 
             }
         }
@@ -217,6 +214,24 @@ public class RenderCustomPainting extends Render
         tessellator.addVertexWithUV(xStart, yEnd, -zPos, uStart, vEnd);
         tessellator.addVertexWithUV(xEnd, yEnd, -zPos, uEnd, vEnd);
 
+        GL11.glEnable(GL11.GL_BLEND);
+//        GL11.glEnable(GL11.);
+        
+//        GL14.glBlendFuncSeparate(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA, GL11.GL_ONE, GL11.GL_ZERO);
+        
+        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA); 
+
+        GL11.glColor4d(1 , 1 , 1 , 0.65);
+        GL11.glBegin(GL11.GL_QUADS);
+//        GL11.glVertex2d(100 , 100);
+//        GL11.glVertex2d(100 , 200);
+//        GL11.glVertex2d(200 , 200);
+//        GL11.glVertex2d(200 , 100);
+        GL11.glEnd();
+
+        
+//        GL11.glDisable(GL11.GL_BLEND);
+//        tessellator.setColorRGBA_F(1, 1, 1, 1f);
         tessellator.draw();
 
     }
