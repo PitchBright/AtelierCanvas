@@ -1,4 +1,6 @@
 # Entities
+entity.ateliercanvas.CustomPaintingEntity.name=Rock Art
+
 
 # Items
 sidben.ateliercanvas:item.custom_painting.name=Pigments
