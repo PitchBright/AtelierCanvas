@@ -6,6 +6,7 @@ eclipse/
 bin/
 repo/
 .settings/
+gradlew
 
 *.class
 
@@ -13,3 +14,7 @@ repo/
 *.jar
 *.war
 *.ear
+.metadata/
+gradlew
+
+gradlew
