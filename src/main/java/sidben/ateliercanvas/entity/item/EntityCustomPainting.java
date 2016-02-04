@@ -2,13 +2,16 @@ package sidben.ateliercanvas.entity.item;
 
 import static sidben.ateliercanvas.handler.ConfigurationHandler.EMPTY_UUID;
 import io.netty.buffer.ByteBuf;
+
 import java.util.Date;
 import java.util.UUID;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityHanging;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
@@ -138,9 +141,32 @@ public class EntityCustomPainting extends EntityHanging implements IEntityAdditi
         }
 
         final ItemStack its_a_me_Painting = this.getMyItem();
-        this.entityDropItem(its_a_me_Painting, 0.0F);
+//        this.entityDropItem(its_a_me_Painting, 0.0F);
     }
 
+    
+    /**
+     * Called when the entity is attacked.
+     */
+    public boolean attackEntityFrom(DamageSource p_70097_1_, float p_70097_2_)
+    {
+        if (this.isEntityInvulnerable())
+        {
+            return true;
+        }
+        else
+        {
+//            if (!this.isDead && !this.worldObj.isRemote)
+//            {
+//                this.setDead();
+//                this.setBeenAttacked();
+//                this.onBroken(p_70097_1_.getEntity());
+//            }
+//
+            return true;
+        }
+    }
+    
 
     /**
      * Called when a user uses the creative pick block button on this entity.

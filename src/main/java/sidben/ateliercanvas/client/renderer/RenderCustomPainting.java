@@ -87,7 +87,7 @@ public class RenderCustomPainting extends Render
     {
         final float f = (-width) / 2.0F;
         final float f1 = (-height) / 2.0F;
-        final double zPos = 0.5;
+        final double zPos = -0.9;
         final float f3 = 0.75F;
         final float f4 = 0.8125F;
         final float f5 = 0.0F;
@@ -141,53 +141,53 @@ public class RenderCustomPainting extends Render
 
                 tessellator.startDrawingQuads();
 
-                // Back
-                tessellator.setNormal(0.0F, 0.0F, 1.0F);
-                tessellator.addVertexWithUV(xEnd, yEnd, zPos, f3, f5);
-                tessellator.addVertexWithUV(xStart, yEnd, zPos, f4, f5);
-                tessellator.addVertexWithUV(xStart, yStart, zPos, f4, f6);
-                tessellator.addVertexWithUV(xEnd, yStart, zPos, f3, f6);
-
-
-                // Borders - top
-                if (j == jMax - 1) {
-                    // Only renders necessary geometry
-                    tessellator.setNormal(0.0F, 1.0F, 0.0F);
-                    tessellator.addVertexWithUV(xEnd, yEnd, (-zPos), f7, f9);
-                    tessellator.addVertexWithUV(xStart, yEnd, (-zPos), f8, f9);
-                    tessellator.addVertexWithUV(xStart, yEnd, zPos, f8, f10);
-                    tessellator.addVertexWithUV(xEnd, yEnd, zPos, f7, f10);
-                }
-
-                // Borders - bottom
-                if (j == 0) {
-                    // Only renders necessary geometry
-                    tessellator.setNormal(0.0F, -1.0F, 0.0F);
-                    tessellator.addVertexWithUV(xEnd, yStart, zPos, f7, f9);
-                    tessellator.addVertexWithUV(xStart, yStart, zPos, f8, f9);
-                    tessellator.addVertexWithUV(xStart, yStart, (-zPos), f8, f10);
-                    tessellator.addVertexWithUV(xEnd, yStart, (-zPos), f7, f10);
-                }
-
-                // Borders - left
-                if (i == iMax - 1) {
-                    // Only renders necessary geometry
-                    tessellator.setNormal(-1.0F, 0.0F, 0.0F);
-                    tessellator.addVertexWithUV(xEnd, yEnd, zPos, f12, f13);
-                    tessellator.addVertexWithUV(xEnd, yStart, zPos, f12, f14);
-                    tessellator.addVertexWithUV(xEnd, yStart, (-zPos), f11, f14);
-                    tessellator.addVertexWithUV(xEnd, yEnd, (-zPos), f11, f13);
-                }
-
-                // Borders - right
-                if (i == 0) {
-                    // Only renders necessary geometry
-                    tessellator.setNormal(1.0F, 0.0F, 0.0F);
-                    tessellator.addVertexWithUV(xStart, yEnd, (-zPos), f12, f13);
-                    tessellator.addVertexWithUV(xStart, yStart, (-zPos), f12, f14);
-                    tessellator.addVertexWithUV(xStart, yStart, zPos, f11, f14);
-                    tessellator.addVertexWithUV(xStart, yEnd, zPos, f11, f13);
-                }
+//                // Back
+//                tessellator.setNormal(0.0F, 0.0F, 1.0F);
+//                tessellator.addVertexWithUV(xEnd, yEnd, zPos, f3, f5);
+//                tessellator.addVertexWithUV(xStart, yEnd, zPos, f4, f5);
+//                tessellator.addVertexWithUV(xStart, yStart, zPos, f4, f6);
+//                tessellator.addVertexWithUV(xEnd, yStart, zPos, f3, f6);
+//
+//
+//                // Borders - top
+//                if (j == jMax - 1) {
+//                    // Only renders necessary geometry
+//                    tessellator.setNormal(0.0F, 1.0F, 0.0F);
+//                    tessellator.addVertexWithUV(xEnd, yEnd, (-zPos), f7, f9);
+//                    tessellator.addVertexWithUV(xStart, yEnd, (-zPos), f8, f9);
+//                    tessellator.addVertexWithUV(xStart, yEnd, zPos, f8, f10);
+//                    tessellator.addVertexWithUV(xEnd, yEnd, zPos, f7, f10);
+//                }
+//
+//                // Borders - bottom
+//                if (j == 0) {
+//                    // Only renders necessary geometry
+//                    tessellator.setNormal(0.0F, -1.0F, 0.0F);
+//                    tessellator.addVertexWithUV(xEnd, yStart, zPos, f7, f9);
+//                    tessellator.addVertexWithUV(xStart, yStart, zPos, f8, f9);
+//                    tessellator.addVertexWithUV(xStart, yStart, (-zPos), f8, f10);
+//                    tessellator.addVertexWithUV(xEnd, yStart, (-zPos), f7, f10);
+//                }
+//
+//                // Borders - left
+//                if (i == iMax - 1) {
+//                    // Only renders necessary geometry
+//                    tessellator.setNormal(-1.0F, 0.0F, 0.0F);
+//                    tessellator.addVertexWithUV(xEnd, yEnd, zPos, f12, f13);
+//                    tessellator.addVertexWithUV(xEnd, yStart, zPos, f12, f14);
+//                    tessellator.addVertexWithUV(xEnd, yStart, (-zPos), f11, f14);
+//                    tessellator.addVertexWithUV(xEnd, yEnd, (-zPos), f11, f13);
+//                }
+//
+//                // Borders - right
+//                if (i == 0) {
+//                    // Only renders necessary geometry
+//                    tessellator.setNormal(1.0F, 0.0F, 0.0F);
+//                    tessellator.addVertexWithUV(xStart, yEnd, (-zPos), f12, f13);
+//                    tessellator.addVertexWithUV(xStart, yStart, (-zPos), f12, f14);
+//                    tessellator.addVertexWithUV(xStart, yStart, zPos, f11, f14);
+//                    tessellator.addVertexWithUV(xStart, yEnd, zPos, f11, f13);
+//                }
 
 
                 tessellator.draw();
@@ -261,132 +261,132 @@ public class RenderCustomPainting extends Render
     protected void func_147914_a(EntityCustomPainting painting, double x, double y, double z)
     {
 
-        if (Minecraft.isGuiEnabled() && this.renderManager.livingPlayer.isSneaking()) {
-            final float titleSize = 0.016666668F * 1.4F;
-            final float subtitleSize = 0.016666668F * 1.0F;
-            final double playerDistance = painting.getDistanceSqToEntity(this.renderManager.livingPlayer);
-            final float displayDistance = 8.0F;
-            final float actualHeight = (float) (painting.boundingBox.maxY - painting.boundingBox.minY);
-            float directionAngle = 0F;
-            final float titleBoxOpacity = 0.5F;
-
-
-
-            if (playerDistance < displayDistance) {
-                String paintingTitle = painting.getTitle();
-                String paintingSubtitle = painting.getAuthor();
-                final int maxTextSize = 128;
-
-                // Formats the title and subtitle
-                if (!StringUtils.isNullOrEmpty(paintingTitle)) {
-                    paintingTitle = this.getFontRendererFromRenderManager().trimStringToWidth(paintingTitle, maxTextSize);
-                    if (painting.getIsAuthentic()) {
-                        paintingTitle = TextFormatTable.COLOR_YELLOW + paintingTitle;
-                    }
-                }
-                if (!StringUtils.isNullOrEmpty(paintingSubtitle)) {
-                    paintingSubtitle = LocalizationHelper.translateFormatted(Category.CONFIG_PAINTING_INFO, "author",
-                            this.getFontRendererFromRenderManager().trimStringToWidth(paintingSubtitle, maxTextSize));
-                }
-
-
-                // Finds the angle to rotate the floating text. I bet there is a better way to do this...
-                if (painting.hangingDirection == 0) {
-                    directionAngle = 180.0F;
-                } else if (painting.hangingDirection == 1) {
-                    directionAngle = 90.0F;
-                } else if (painting.hangingDirection == 3) {
-                    directionAngle = -90.0F;
-                }
-
-
-                final FontRenderer fontrenderer = this.getFontRendererFromRenderManager();
-                final Tessellator tessellator = Tessellator.instance;
-                int i;
-
-
-                // Title
-                if (!StringUtils.isNullOrEmpty(paintingTitle)) {
-                    GL11.glPushMatrix();
-                    GL11.glTranslatef((float) x, (float) y + 0.45F - (actualHeight / 2), (float) z);
-
-                    GL11.glNormal3f(0.0F, 1.0F, 0.0F);
-                    GL11.glRotatef(directionAngle, 0.0F, 1.0F, 0.0F);                               // -this.renderManager.playerViewY
-                    GL11.glRotatef(this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);               // this.renderManager.playerViewX
-                    GL11.glScalef(-titleSize, -titleSize, titleSize);
-                    GL11.glDisable(GL11.GL_LIGHTING);
-                    GL11.glTranslatef(0.0F, 1.0F, 0.0F);
-                    GL11.glDepthMask(false);
-                    GL11.glEnable(GL11.GL_BLEND);
-                    GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-
-                    GL11.glDisable(GL11.GL_TEXTURE_2D);
-                    tessellator.startDrawingQuads();
-
-                    // Draws the box behind the text
-                    i = fontrenderer.getStringWidth(paintingTitle) / 2;
-                    tessellator.setColorRGBA_F(0.0F, 0.0F, 0.0F, titleBoxOpacity);
-                    tessellator.addVertex(-i - 1, -1.0D, 0.0D);
-                    tessellator.addVertex(-i - 1, 8.0D, 0.0D);
-                    tessellator.addVertex(i + 1, 8.0D, 0.0D);
-                    tessellator.addVertex(i + 1, -1.0D, 0.0D);
-                    tessellator.draw();
-
-                    // Draws the text
-                    GL11.glEnable(GL11.GL_TEXTURE_2D);
-                    fontrenderer.drawString(paintingTitle, -fontrenderer.getStringWidth(paintingTitle) / 2, 0, 553648127);
-                    GL11.glEnable(GL11.GL_DEPTH_TEST);
-                    GL11.glDepthMask(true);
-                    fontrenderer.drawString(paintingTitle, -fontrenderer.getStringWidth(paintingTitle) / 2, 0, -1);
-                    GL11.glEnable(GL11.GL_LIGHTING);
-                    GL11.glDisable(GL11.GL_BLEND);
-                    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-                    GL11.glPopMatrix();
-                }
-
-
-
-                // Subtitle
-                if (!StringUtils.isNullOrEmpty(paintingSubtitle)) {
-                    GL11.glPushMatrix();
-                    GL11.glTranslatef((float) x, (float) y + 0.2F - (actualHeight / 2), (float) z);
-
-                    GL11.glNormal3f(0.0F, 1.0F, 0.0F);
-                    GL11.glRotatef(directionAngle, 0.0F, 1.0F, 0.0F);                               // -this.renderManager.playerViewY
-                    GL11.glRotatef(this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);               // this.renderManager.playerViewX
-                    GL11.glScalef(-subtitleSize, -subtitleSize, subtitleSize);
-                    GL11.glDisable(GL11.GL_LIGHTING);
-                    GL11.glTranslatef(0.0F, 1.0F, 0.0F);
-                    GL11.glDepthMask(false);
-                    GL11.glEnable(GL11.GL_BLEND);
-                    GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-
-                    GL11.glDisable(GL11.GL_TEXTURE_2D);
-                    tessellator.startDrawingQuads();
-
-                    // Draws the box behind the text
-                    i = fontrenderer.getStringWidth(paintingSubtitle) / 2;
-                    tessellator.setColorRGBA_F(0.0F, 0.0F, 0.0F, titleBoxOpacity);
-                    tessellator.addVertex(-i - 1, -1.0D, 0.0D);
-                    tessellator.addVertex(-i - 1, 8.0D, 0.0D);
-                    tessellator.addVertex(i + 1, 8.0D, 0.0D);
-                    tessellator.addVertex(i + 1, -1.0D, 0.0D);
-                    tessellator.draw();
-
-                    // Draws the text
-                    GL11.glEnable(GL11.GL_TEXTURE_2D);
-                    fontrenderer.drawString(paintingSubtitle, -fontrenderer.getStringWidth(paintingSubtitle) / 2, 0, 553648127);
-                    GL11.glEnable(GL11.GL_DEPTH_TEST);
-                    GL11.glDepthMask(true);
-                    fontrenderer.drawString(paintingSubtitle, -fontrenderer.getStringWidth(paintingSubtitle) / 2, 0, -1);
-                    GL11.glEnable(GL11.GL_LIGHTING);
-                    GL11.glDisable(GL11.GL_BLEND);
-                    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-                    GL11.glPopMatrix();
-                }
-
-            }
-        }
+//        if (Minecraft.isGuiEnabled() && this.renderManager.livingPlayer.isSneaking()) {
+//            final float titleSize = 0.016666668F * 1.4F;
+//            final float subtitleSize = 0.016666668F * 1.0F;
+//            final double playerDistance = painting.getDistanceSqToEntity(this.renderManager.livingPlayer);
+//            final float displayDistance = 8.0F;
+//            final float actualHeight = (float) (painting.boundingBox.maxY - painting.boundingBox.minY);
+//            float directionAngle = 0F;
+//            final float titleBoxOpacity = 0.5F;
+//
+//
+//
+//            if (playerDistance < displayDistance) {
+//                String paintingTitle = painting.getTitle();
+//                String paintingSubtitle = painting.getAuthor();
+//                final int maxTextSize = 128;
+//
+//                // Formats the title and subtitle
+//                if (!StringUtils.isNullOrEmpty(paintingTitle)) {
+//                    paintingTitle = this.getFontRendererFromRenderManager().trimStringToWidth(paintingTitle, maxTextSize);
+//                    if (painting.getIsAuthentic()) {
+//                        paintingTitle = TextFormatTable.COLOR_YELLOW + paintingTitle;
+//                    }
+//                }
+//                if (!StringUtils.isNullOrEmpty(paintingSubtitle)) {
+//                    paintingSubtitle = LocalizationHelper.translateFormatted(Category.CONFIG_PAINTING_INFO, "author",
+//                            this.getFontRendererFromRenderManager().trimStringToWidth(paintingSubtitle, maxTextSize));
+//                }
+//
+//
+//                // Finds the angle to rotate the floating text. I bet there is a better way to do this...
+//                if (painting.hangingDirection == 0) {
+//                    directionAngle = 180.0F;
+//                } else if (painting.hangingDirection == 1) {
+//                    directionAngle = 90.0F;
+//                } else if (painting.hangingDirection == 3) {
+//                    directionAngle = -90.0F;
+//                }
+//
+//
+//                final FontRenderer fontrenderer = this.getFontRendererFromRenderManager();
+//                final Tessellator tessellator = Tessellator.instance;
+//                int i;
+//
+//
+//                // Title
+//                if (!StringUtils.isNullOrEmpty(paintingTitle)) {
+//                    GL11.glPushMatrix();
+//                    GL11.glTranslatef((float) x, (float) y + 0.45F - (actualHeight / 2), (float) z);
+//
+//                    GL11.glNormal3f(0.0F, 1.0F, 0.0F);
+//                    GL11.glRotatef(directionAngle, 0.0F, 1.0F, 0.0F);                               // -this.renderManager.playerViewY
+//                    GL11.glRotatef(this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);               // this.renderManager.playerViewX
+//                    GL11.glScalef(-titleSize, -titleSize, titleSize);
+//                    GL11.glDisable(GL11.GL_LIGHTING);
+//                    GL11.glTranslatef(0.0F, 1.0F, 0.0F);
+//                    GL11.glDepthMask(false);
+//                    GL11.glEnable(GL11.GL_BLEND);
+//                    GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+//
+//                    GL11.glDisable(GL11.GL_TEXTURE_2D);
+//                    tessellator.startDrawingQuads();
+//
+//                    // Draws the box behind the text
+//                    i = fontrenderer.getStringWidth(paintingTitle) / 2;
+//                    tessellator.setColorRGBA_F(0.0F, 0.0F, 0.0F, titleBoxOpacity);
+//                    tessellator.addVertex(-i - 1, -1.0D, 0.0D);
+//                    tessellator.addVertex(-i - 1, 8.0D, 0.0D);
+//                    tessellator.addVertex(i + 1, 8.0D, 0.0D);
+//                    tessellator.addVertex(i + 1, -1.0D, 0.0D);
+//                    tessellator.draw();
+//
+//                    // Draws the text
+//                    GL11.glEnable(GL11.GL_TEXTURE_2D);
+//                    fontrenderer.drawString(paintingTitle, -fontrenderer.getStringWidth(paintingTitle) / 2, 0, 553648127);
+//                    GL11.glEnable(GL11.GL_DEPTH_TEST);
+//                    GL11.glDepthMask(true);
+//                    fontrenderer.drawString(paintingTitle, -fontrenderer.getStringWidth(paintingTitle) / 2, 0, -1);
+//                    GL11.glEnable(GL11.GL_LIGHTING);
+//                    GL11.glDisable(GL11.GL_BLEND);
+//                    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+//                    GL11.glPopMatrix();
+//                }
+//
+//
+//
+//                // Subtitle
+//                if (!StringUtils.isNullOrEmpty(paintingSubtitle)) {
+//                    GL11.glPushMatrix();
+//                    GL11.glTranslatef((float) x, (float) y + 0.2F - (actualHeight / 2), (float) z);
+//
+//                    GL11.glNormal3f(0.0F, 1.0F, 0.0F);
+//                    GL11.glRotatef(directionAngle, 0.0F, 1.0F, 0.0F);                               // -this.renderManager.playerViewY
+//                    GL11.glRotatef(this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);               // this.renderManager.playerViewX
+//                    GL11.glScalef(-subtitleSize, -subtitleSize, subtitleSize);
+//                    GL11.glDisable(GL11.GL_LIGHTING);
+//                    GL11.glTranslatef(0.0F, 1.0F, 0.0F);
+//                    GL11.glDepthMask(false);
+//                    GL11.glEnable(GL11.GL_BLEND);
+//                    GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+//
+//                    GL11.glDisable(GL11.GL_TEXTURE_2D);
+//                    tessellator.startDrawingQuads();
+//
+//                    // Draws the box behind the text
+//                    i = fontrenderer.getStringWidth(paintingSubtitle) / 2;
+//                    tessellator.setColorRGBA_F(0.0F, 0.0F, 0.0F, titleBoxOpacity);
+//                    tessellator.addVertex(-i - 1, -1.0D, 0.0D);
+//                    tessellator.addVertex(-i - 1, 8.0D, 0.0D);
+//                    tessellator.addVertex(i + 1, 8.0D, 0.0D);
+//                    tessellator.addVertex(i + 1, -1.0D, 0.0D);
+//                    tessellator.draw();
+//
+//                    // Draws the text
+//                    GL11.glEnable(GL11.GL_TEXTURE_2D);
+//                    fontrenderer.drawString(paintingSubtitle, -fontrenderer.getStringWidth(paintingSubtitle) / 2, 0, 553648127);
+//                    GL11.glEnable(GL11.GL_DEPTH_TEST);
+//                    GL11.glDepthMask(true);
+//                    fontrenderer.drawString(paintingSubtitle, -fontrenderer.getStringWidth(paintingSubtitle) / 2, 0, -1);
+//                    GL11.glEnable(GL11.GL_LIGHTING);
+//                    GL11.glDisable(GL11.GL_BLEND);
+//                    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+//                    GL11.glPopMatrix();
+//                }
+//
+//            }
+//        }
     }
 
 
