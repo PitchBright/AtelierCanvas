@@ -221,7 +221,7 @@ public class RenderCustomPainting extends Render
         
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA); 
 
-        GL11.glColor4d(1 , 1 , 1 , 0.65);
+        GL11.glColor4d(1 , 1 , 1 , 0.75);
         GL11.glBegin(GL11.GL_QUADS);
 //        GL11.glVertex2d(100 , 100);
 //        GL11.glVertex2d(100 , 200);
