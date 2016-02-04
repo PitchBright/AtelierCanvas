@@ -1,12 +1,12 @@
 # Entities
 
 # Items
-sidben.ateliercanvas:item.custom_painting.name=Custom Painting
-sidben.ateliercanvas:item.custom_painting.author=Artist: %s
+sidben.ateliercanvas:item.custom_painting.name=Pigments
+sidben.ateliercanvas:item.custom_painting.author=
 sidben.ateliercanvas:item.custom_painting.original=Authentic
 sidben.ateliercanvas:item.custom_painting.copy=
-sidben.ateliercanvas:item.custom_painting.copy_copy=Forgery
-sidben.ateliercanvas:item.random_painting.name=Mysterious Painting
+sidben.ateliercanvas:item.custom_painting.copy_copy=
+sidben.ateliercanvas:item.random_painting.name=Pigments
 
 # Creative Tab
 sidben.ateliercanvas:creative_tab.name=Atelier Canvas
