@@ -3,6 +3,8 @@ package sidben.ateliercanvas.item;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityHanging;
@@ -210,7 +212,7 @@ public class ItemCustomPainting extends Item
     {
 
         // Check if the player clicked on a valid surface (only accept the side of blocks)
-        if (side == BlockSide.ABOVE || side == BlockSide.BELOW) {
+        if ((side == BlockSide.ABOVE || side == BlockSide.BELOW) || (world.getBlock(x, y, z).getMaterial() != Material.rock)) {
             return false;
 
         } else {
